@@ -27,9 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_splitio'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +47,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SPLITIO = {
+    'apiKey': 'localhost',
+    'splitFile': os.path.join(os.path.expanduser('~'), 'example.yaml')
+}
 
 ROOT_URLCONF = 'hellosplit.urls'
 
